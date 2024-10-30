@@ -5,7 +5,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ["react-router-dom"],
+      // Remove the problematic module from the external array
+      external: [],
     },
   },
 });
